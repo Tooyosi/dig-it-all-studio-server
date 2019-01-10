@@ -37,8 +37,8 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
-server.get("/error", function(req, res){
-    res.send("Mail Not sent");
+server.get("/", function(req, res){
+    res.send("Running app");
 })
 
 server.get("/success", function(req, res){
