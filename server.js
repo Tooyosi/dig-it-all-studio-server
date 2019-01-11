@@ -49,10 +49,10 @@ server.post("/api/email", function create(req, res, next){
     // console.log(req.params)
     console.log(req.body)
     var mail = {
-        from: req.body.fields.email,
+        from: req.body.email,
         to: 'tuc0476@gmail.com',
         subject: 'New Mail',
-        html: "name: <br />"+ req.body.fields.name + "<br /> Message: <br />"+ req.body.fields.message + "<br />email <br />"+ req.body.fields.email,
+        html: "name: <br />"+ req.body.name + "<br /> Message: <br />"+ req.body.message + "<br />email <br />"+ req.body.email,
     }
     smtpTransport.sendMail(mail, function(error, response){
         if(error){
